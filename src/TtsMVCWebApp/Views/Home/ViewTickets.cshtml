@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TtsMVCWebApp.Controllers.Ticket>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tickets</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Ticket Reference</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.Id</td>
+                    <td>@ticket.Title</td>
+                    <td>@ticket.Description</td>
+                </tr>
+            }            
+        </tbody>
+    </table>
+
+</div>
